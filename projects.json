@@ -1,0 +1,89 @@
+[
+    {
+        "name": "AI-CHAT-APP",
+        "description": "Ai based chat app",
+        "url": "https://github.com/ratna756083/AI-CHAT-APP",
+        "topics": [],
+        "stars": 0,
+        "forks": 0,
+        "language": "JavaScript"
+    },
+    {
+        "name": "KHATABOOK",
+        "description": "project",
+        "url": "https://github.com/ratna756083/KHATABOOK",
+        "topics": [],
+        "stars": 1,
+        "forks": 0,
+        "language": "CSS"
+    },{
+    "title": "AI-CHAT-APP",
+    "slug": "ai-chatbot",
+    "description": "Chat App with AI is a real-time collaborative platform where multiple users can join a shared chat room to communicate seamlessly. It integrates an intelligent AI assistant (@AI) that users can tag for instant help or code-related answers. The app also includes an in-browser Node.js server feature, allowing users to run backend code directly from the browser without external deployment.",
+    "whyBuilt": "To create a unified platform that enables real-time collaboration, peer communication, and AI-powered problem-solving, all within a browser-based development environment. It bridges the gap between human teamwork and AI assistance, ideal for coding sessions, discussions, or study groups.",
+    "techStack": [
+      "React",
+      "Vite",
+      "Tailwind CSS",
+      "React Router",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Gemini API"
+
+    ],
+    "features": [
+      "Real-time group chat using WebSockets",
+      "Multi-user collaboration (rooms and channels)",
+      "Tag @AI to get instant answers, explanations, or code help",
+      "Run Node.js server in the browser using WebContainer (by StackBlitz tech)",
+      "Persistent chat history and user sessions",
+      "Syntax-highlighted code blocks and markdown messages",
+      "Authentication and user profiles",
+      "Typing indicators and online/offline status",
+      "Mobile-friendly responsive design"
+    ],
+    "folderStructure":"Not provided",
+    "screenshots": [
+      "https://github.com/ratna756083/my-project-repo"
+    ],
+    "githubLink": "https://github.com/ratna756083/AI-CHAT-APP",
+    "liveDemo": "ai-chat-app-sage.vercel.app",
+    "readmeHighlights": {
+      "installation": "frontend-npm install && npm run dev, backend-npm install && npm start",
+      "envSetup": "You need to set up environment variables for API keys and database connections",
+      "usage": "Resister,Login then uses, "
+    },
+    "isLatest": true
+  },{
+    "title": "KHATABOOK",
+    "slug": "khatabook",
+    "description": "Khatabook is a simple yet powerful bookkeeping application built with Node.js and Express. It allows users to record, update, and track financial transactions and balances using the Node.js file system for storage instead of a database.",
+    "whyBuilt": "To practice backend fundamentals using Node.js and Express, exploring how to store and manage data locally through the file system without relying on external databases",
+    "techStack": ["Node.js", "Express.js", "File System (fs)", "Nodemon", "body-parser"],
+    "features":  [
+    "Add, update, and delete transaction records",
+    "Store data locally in JSON files",
+    "RESTful API architecture",
+    "Lightweight backend without any database",
+    "Middleware for request validation and error handling"
+  ],
+    "folderStructure":"Not provided",
+    "screenshots": [
+      "https://raw.githubusercontent.com/Rohan04022003/my-project-data-repo/main/public/images/botforge01.png",
+      "https://raw.githubusercontent.com/Rohan04022003/my-project-data-repo/main/public/images/botforge02.png",
+      "https://raw.githubusercontent.com/Rohan04022003/my-project-data-repo/main/public/images/botforge04.png",
+      "https://raw.githubusercontent.com/Rohan04022003/my-project-data-repo/main/public/images/botforge05.png",
+      "https://raw.githubusercontent.com/Rohan04022003/my-project-data-repo/main/public/images/botforge06.png"
+    ],
+    "githubLink": "https://github.com/ratna756083/KHATABOOK",
+    "liveDemo": "https://khatabook-3-cdoq.onrender.com",
+    "readmeHighlights": {
+      "installation": "npm install && npm start",
+      "envSetup": "You don't need to set up environment variables for API keys and database connections",
+      "usage": ".. "
+    },
+    "isLatest": true
+  }
+   
+]
