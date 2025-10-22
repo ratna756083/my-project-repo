@@ -1,22 +1,5 @@
 [
     {
-        "name": "AI-CHAT-APP",
-        "description": "Ai based chat app",
-        "url": "https://github.com/ratna756083/AI-CHAT-APP",
-        "topics": [],
-        "stars": 0,
-        "forks": 0,
-        "language": "JavaScript"
-    },
-    {
-        "name": "KHATABOOK",
-        "description": "project",
-        "url": "https://github.com/ratna756083/KHATABOOK",
-        "topics": [],
-        "stars": 1,
-        "forks": 0,
-        "language": "CSS"
-    },{
     "title": "AI-CHAT-APP",
     "slug": "ai-chatbot",
     "description": "Chat App with AI is a real-time collaborative platform where multiple users can join a shared chat room to communicate seamlessly. It integrates an intelligent AI assistant (@AI) that users can tag for instant help or code-related answers. The app also includes an in-browser Node.js server feature, allowing users to run backend code directly from the browser without external deployment.",
@@ -45,7 +28,10 @@
     ],
     "folderStructure":"Not provided",
     "screenshots": [
-      "https://github.com/ratna756083/my-project-repo"
+     "https://github.com/ratna756083/my-project-repo/blob/main/public/images/chatapp1.png",
+     "https://github.com/ratna756083/my-project-repo/blob/main/public/images/chatapp2.png",
+     "https://github.com/ratna756083/my-project-repo/blob/main/public/images/chatapp3.png",
+     "https://github.com/ratna756083/my-project-repo/blob/main/public/images/chatapp4.png"
     ],
     "githubLink": "https://github.com/ratna756083/AI-CHAT-APP",
     "liveDemo": "ai-chat-app-sage.vercel.app",
@@ -70,11 +56,8 @@
   ],
     "folderStructure":"Not provided",
     "screenshots": [
-      "https://raw.githubusercontent.com/Rohan04022003/my-project-data-repo/main/public/images/botforge01.png",
-      "https://raw.githubusercontent.com/Rohan04022003/my-project-data-repo/main/public/images/botforge02.png",
-      "https://raw.githubusercontent.com/Rohan04022003/my-project-data-repo/main/public/images/botforge04.png",
-      "https://raw.githubusercontent.com/Rohan04022003/my-project-data-repo/main/public/images/botforge05.png",
-      "https://raw.githubusercontent.com/Rohan04022003/my-project-data-repo/main/public/images/botforge06.png"
+     "https://github.com/ratna756083/my-project-repo/blob/main/public/images/khatabook1.png",
+     "https://github.com/ratna756083/my-project-repo/blob/main/public/images/khatabook2.png"
     ],
     "githubLink": "https://github.com/ratna756083/KHATABOOK",
     "liveDemo": "https://khatabook-3-cdoq.onrender.com",
