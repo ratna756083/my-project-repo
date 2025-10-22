@@ -46,7 +46,7 @@
     "slug": "khatabook",
     "description": "Khatabook is a simple yet powerful bookkeeping application built with Node.js and Express. It allows users to record, update, and track financial transactions and balances using the Node.js file system for storage instead of a database.",
     "whyBuilt": "To practice backend fundamentals using Node.js and Express, exploring how to store and manage data locally through the file system without relying on external databases",
-    "techStack": ["Node.js", "Express.js", "File System (fs)", "Nodemon", "body-parser"],
+    "techStack": ["Node.js", "Express.js", "FS", "Nodemon", "body-parser"],
     "features":  [
     "Add, update, and delete transaction records",
     "Store data locally in JSON files",
@@ -56,7 +56,6 @@
   ],
     "folderStructure":"Not provided",
     "screenshots": [
-     "https://raw.githubusercontent.com/ratna756083/my-project-repo/refs/heads/main/public/images/khatabook1.png",
      "https://raw.githubusercontent.com/ratna756083/my-project-repo/refs/heads/main/public/images/khatabook2.png"
     ],
     "githubLink": "https://github.com/ratna756083/KHATABOOK",
