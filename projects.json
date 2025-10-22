@@ -28,10 +28,10 @@
     ],
     "folderStructure":"Not provided",
     "screenshots": [
-     "https://github.com/ratna756083/my-project-repo/blob/main/public/images/chatapp1.png",
-     "https://github.com/ratna756083/my-project-repo/blob/main/public/images/chatapp2.png",
-     "https://github.com/ratna756083/my-project-repo/blob/main/public/images/chatapp3.png",
-     "https://github.com/ratna756083/my-project-repo/blob/main/public/images/chatapp4.png"
+     "https://raw.githubusercontent.com/ratna756083/my-project-repo/refs/heads/main/public/images/chatapp1.png",
+     "https://raw.githubusercontent.com/ratna756083/my-project-repo/refs/heads/main/public/images/chatapp2.png",
+     "https://raw.githubusercontent.com/ratna756083/my-project-repo/refs/heads/main/public/images/chatapp3.png",
+     "https://raw.githubusercontent.com/ratna756083/my-project-repo/refs/heads/main/public/images/chatapp4.png"
     ],
     "githubLink": "https://github.com/ratna756083/AI-CHAT-APP",
     "liveDemo": "ai-chat-app-sage.vercel.app",
@@ -56,8 +56,8 @@
   ],
     "folderStructure":"Not provided",
     "screenshots": [
-     "https://github.com/ratna756083/my-project-repo/blob/main/public/images/khatabook1.png",
-     "https://github.com/ratna756083/my-project-repo/blob/main/public/images/khatabook2.png"
+     "https://raw.githubusercontent.com/ratna756083/my-project-repo/refs/heads/main/public/images/khatabook1.png",
+     "https://raw.githubusercontent.com/ratna756083/my-project-repo/refs/heads/main/public/images/khatabook2.png"
     ],
     "githubLink": "https://github.com/ratna756083/KHATABOOK",
     "liveDemo": "https://khatabook-3-cdoq.onrender.com",
