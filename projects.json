@@ -10,6 +10,7 @@
       "Tailwind CSS",
       "React Router",
       "Redux Toolkit",
+      "React Markdown",
       "Node.js",
       "Express.js",
       "MongoDB",
@@ -23,60 +24,55 @@
     "features": [
       "AI-powered conversations using Google Gemini",
       "Internet search integration for up-to-date information",
-      "Separate conversations with generated chat titles",
+      "AI-generated titles for new conversations",
       "Persistent chat history stored in MongoDB",
       "Create, open, and delete conversations",
       "Markdown-rendered AI responses",
       "Email and password registration and login",
       "Google OAuth sign-in",
-      "Protected chat dashboard and user session handling",
+      "Protected dashboard and authenticated user sessions",
       "Responsive chat interface with mobile-friendly navigation"
     ],
     "folderStructure": {
-      "root": ["README.md - Main project overview and documentation"],
-      "frontend": {
-        "root": ["Frontend/README.md - Frontend-specific documentation"],
-        "src": [
-          "Frontend/src/main.jsx - Frontend entry point; initializes and renders the React application",
-          "Frontend/src/app/App.jsx - Root application component",
-          "Frontend/src/app/app.routes.jsx - Route definitions for the dashboard, login, and registration pages",
-          "Frontend/src/app/app.store.js - Redux store configuration",
-          "Frontend/src/app/index.css - Global styles and Tailwind CSS imports",
-          "Frontend/src/features/auth/auth.slice.js - Redux authentication state",
-          "Frontend/src/features/auth/componets/Protected.jsx - Protects routes that require an authenticated user",
-          "Frontend/src/features/auth/hooks/useAuth.js - Authentication-related React hook and actions",
-          "Frontend/src/features/auth/pages/Login.jsx - User login page",
-          "Frontend/src/features/auth/pages/Register.jsx - User registration page",
-          "Frontend/src/features/auth/services/auth.api.js - Frontend API calls for authentication",
-          "Frontend/src/features/chat/chat.slice.js - Redux state for chats and messages",
-          "Frontend/src/features/chat/hooks/useChat.js - Chat actions and chat-related application logic",
-          "Frontend/src/features/chat/pages/Dashboard.jsx - Main chat interface, conversation list, and message composer",
-          "Frontend/src/features/chat/service/chat.api.js - Frontend API calls for chat and message operations",
-          "Frontend/src/features/chat/service/chat.socket.js - Socket.IO client connection setup"
-        ]
-      },
-      "backend": {
-        "root": [
-          "Backend/server.js - Starts the HTTP server, connects to MongoDB, and initializes Socket.IO",
-          "Backend/.env.example - Example template for backend environment variables"
-        ],
-        "src": [
-          "Backend/src/app.js - Configures Express, middleware, Google OAuth, CORS, and API routes",
-          "Backend/src/config/database.js - Connects the application to MongoDB",
-          "Backend/src/controllers/auth.controller.js - Handles registration, login, Google OAuth callback, current-user lookup, and logout",
-          "Backend/src/controllers/chat.controller.js - Handles sending messages, listing chats, loading messages, and deleting chats",
-          "Backend/src/middleware/auth.middleware.js - Verifies user authentication for protected routes",
-          "Backend/src/models/user.model.js - Mongoose user model",
-          "Backend/src/models/chat.model.js - Mongoose conversation model",
-          "Backend/src/models/message.model.js - Mongoose chat message model",
-          "Backend/src/routes/auth.routes.js - Authentication and Google OAuth routes",
-          "Backend/src/routes/chat.routes.js - Protected chat and message API routes",
-          "Backend/src/services/ai.services.js - Generates AI responses and chat titles using LangChain model integrations",
-          "Backend/src/services/internet.services.js - Provides internet search through the Tavily API",
-          "Backend/src/sockets/server.socket.js - Initializes the Socket.IO server",
-          "Backend/src/validators/auth.validator.js - Validates authentication requests"
-        ]
-      }
+      "public": [
+        "Frontend/public/** - Static assets, including the favicon and SVG icons"
+      ],
+      "src": [
+        "Frontend/src/main.jsx - Frontend entry point that renders the React application",
+        "Frontend/src/app/** - Root app component, React Router configuration, Redux store, and global styles",
+        "Frontend/src/features/auth/auth.slice.js - Redux authentication state",
+        "Frontend/src/features/auth/componets/Protected.jsx - Protects routes that require authentication",
+        "Frontend/src/features/auth/hooks/** - Authentication-related React hooks",
+        "Frontend/src/features/auth/pages/** - Login and registration pages",
+        "Frontend/src/features/auth/services/** - Frontend authentication API integration",
+        "Frontend/src/features/chat/chat.slice.js - Redux state for chats and messages",
+        "Frontend/src/features/chat/hooks/** - Chat actions and application logic",
+        "Frontend/src/features/chat/pages/** - Chat dashboard and message interface",
+        "Frontend/src/features/chat/service/** - Chat API integration and Socket.IO client setup",
+        "Backend/src/app.js - Express application, middleware, OAuth setup, and API route registration",
+        "Backend/src/config/** - MongoDB connection configuration",
+        "Backend/src/controllers/** - Authentication and chat request handlers",
+        "Backend/src/middleware/** - Authentication middleware",
+        "Backend/src/models/** - Mongoose user, chat, and message models",
+        "Backend/src/routes/** - Authentication and chat API routes",
+        "Backend/src/services/ai.services.js - AI response and chat title generation",
+        "Backend/src/services/internet.services.js - Tavily internet search integration",
+        "Backend/src/sockets/** - Socket.IO server initialization",
+        "Backend/src/validators/** - Authentication request validation"
+      ],
+      "root": [
+        "README.md - Project documentation file",
+        "Frontend/index.html - Vite HTML entry point",
+        "Frontend/package.json - Frontend dependencies and scripts",
+        "Frontend/package-lock.json - Locked frontend dependency versions",
+        "Frontend/vite.config.js - Vite configuration",
+        "Frontend/.oxlintrc.json - Oxlint configuration",
+        "Frontend/README.md - Frontend documentation file",
+        "Backend/server.js - Starts the backend server, connects to MongoDB, and initializes Socket.IO",
+        "Backend/package.json - Backend dependencies and scripts",
+        "Backend/package-lock.json - Locked backend dependency versions",
+        "Backend/.env.example - Example backend environment variable template"
+      ]
     },
     "screenshots": [
       "https://github.com/ratna756083/my-project-repo/blob/main/public/images/perplexity1.png?raw=true",
@@ -88,16 +84,35 @@
     "liveDemo": "https://perplexity-frontend-9e0x.onrender.com",
     "readmeHighlights": {
       "installation": "Frontend: cd Frontend && npm install && npm run dev. Backend: cd Backend && npm install && npm run dev.",
-      "envSetup": "Configure MONGO_URI, JWT_SECRET, GOOGLE_API_KEY, MISTRAL_API_KEY, TAVILY_API_KEY, GOOGLE_CLIENT_ID, and GOOGLE_CLIENT_SECRET in the backend environment.",
-      "usage": "Register or sign in, start a conversation, and ask the AI a question. Your conversations are saved so you can return to them later."
+      "envSetup": [
+        "MONGO_URI=your_mongodb_connection_string",
+        "JWT_SECRET=your_jwt_secret",
+        "GOOGLE_API_KEY=your_google_api_key",
+        "MISTRAL_API_KEY=your_mistral_api_key",
+        "TAVILY_API_KEY=your_tavily_api_key",
+        "GOOGLE_CLIENT_ID=your_google_oauth_client_id",
+        "GOOGLE_CLIENT_SECRET=your_google_oauth_client_secret"
+      ],
+      "usage": "Register or sign in, start a conversation, and ask the AI a question. Conversations are saved so you can return to them later."
     },
+    "tags": [
+      "ai",
+      "chatbot",
+      "react",
+      "nodejs",
+      "express",
+      "mongodb",
+      "gemini",
+      "tavily",
+      "langchain"
+    ],
     "isLatest": true
   },
   {
-    "title": "Snitch — E-commerce Marketplace",
+    "title": "Snitch E-commerce",
     "slug": "snitch-e-commerce-marketplace",
-    "description": "A full-stack shopping platform where customers can browse products, choose variants, manage a cart, and pay online. Sellers can create and manage product listings through a protected dashboard.",
-    "whyBuilt": "To create a complete online shopping experience that brings product discovery, seller tools, cart management, and secure online payments together in one application.",
+    "description": "A full-stack e-commerce application where customers can browse products, choose variants, manage their cart, and complete purchases through Razorpay. Sellers can create and manage product listings through a protected dashboard.",
+    "whyBuilt": "To bring product discovery, seller tools, shopping cart management, and online payments together in a complete shopping experience.",
     "techStack": [
       "React",
       "Vite",
@@ -116,63 +131,53 @@
       "Razorpay"
     ],
     "features": [
-      "Browse and search the product collection",
-      "Sort products by newest and price",
+      "Browse, search, and sort products",
       "View product details, images, and available variants",
       "Register and sign in with email and password",
       "Sign in with Google OAuth",
-      "Separate buyer and seller roles",
-      "Protected seller dashboard for managing listings",
-      "Create product listings with multiple images",
+      "Buyer and seller roles with protected seller pages",
+      "Seller dashboard for managing product listings",
+      "Create products with multiple images",
       "Add product variants with attributes, images, prices, and stock",
-      "Add products to a cart and update item quantities",
-      "Check product stock when managing cart items",
-      "Pay through Razorpay checkout",
+      "Add products to the cart and update quantities",
+      "Check product stock when adding or updating cart items",
+      "Complete purchases using Razorpay checkout",
       "Verify payments on the backend and save payment records",
       "View an order-success page after checkout",
-      "Store user, product, cart, and payment data in MongoDB",
-      "Use cookie-based JWT sessions with Redis-backed token revocation",
-      "Responsive shopping and seller interfaces"
+      "Persist users, products, carts, and payments in MongoDB",
+      "Use cookie-based JWT authentication with Redis-backed token revocation",
+      "Responsive storefront and seller interface"
     ],
     "folderStructure": {
-      "root": [
-        "Frontend/ - React/Vite client application",
-        "Backend/ - Express API and server"
+      "public": [
+        "Frontend/public/** - Static assets, including the favicon and SVG icons"
       ],
-      "frontend": {
-        "root": [
-          "Frontend/index.html - Vite HTML entry point",
-          "Frontend/package.json - Frontend dependencies and scripts",
-          "Frontend/vite.config.js - Vite configuration",
-          "Frontend/public/ - Static assets"
-        ],
-        "src": [
-          "Frontend/src/main.jsx - Frontend entry point",
-          "Frontend/src/app/App.jsx - Root React component",
-          "Frontend/src/app/app.routes.jsx - Application routes",
-          "Frontend/src/app/app.store.js - Redux store configuration",
-          "Frontend/src/features/auth/ - Authentication state, API calls, hooks, pages, and protected-route component",
-          "Frontend/src/features/products/ - Product state, API calls, hooks, storefront, product detail, and seller pages",
-          "Frontend/src/features/cart/ - Cart state, API calls, hooks, cart page, and order-success page"
-        ]
-      },
-      "backend": {
-        "root": [
-          "Backend/server.js - Connects to MongoDB and starts the API server",
-          "Backend/package.json - Backend dependencies and development script"
-        ],
-        "src": [
-          "Backend/src/app.js - Express setup, CORS, middleware, Google OAuth, and API routes",
-          "Backend/src/config/ - Database, environment configuration, and Redis connection",
-          "Backend/src/controllers/ - Authentication, product, and cart request handlers",
-          "Backend/src/dao/ - Product and cart data-access helpers",
-          "Backend/src/middlewares/auth.middleware.js - User and seller authentication",
-          "Backend/src/models/ - User, product, price, cart, and payment schemas",
-          "Backend/src/routes/ - Authentication, product, and cart API routes",
-          "Backend/src/services/ - ImageKit uploads and Razorpay order creation",
-          "Backend/src/validator/ - Authentication, product, and cart request validation"
-        ]
-      }
+      "src": [
+        "Frontend/src/main.jsx - Frontend entry point that renders the React application",
+        "Frontend/src/app/** - Root app component, routes, Redux store, and global styles",
+        "Frontend/src/features/auth/** - Authentication state, hooks, API integration, login and registration pages, and protected routes",
+        "Frontend/src/features/products/** - Product state, API integration, hooks, storefront, product details, and seller product pages",
+        "Frontend/src/features/cart/** - Cart state, API integration, hooks, cart page, and order-success page",
+        "Backend/src/app.js - Express application setup, middleware, Google OAuth, and API route registration",
+        "Backend/src/config/** - Environment configuration, MongoDB connection, and Redis connection",
+        "Backend/src/controllers/** - Authentication, product, and cart request handlers",
+        "Backend/src/dao/** - Product and cart data-access helpers",
+        "Backend/src/middlewares/** - User and seller authentication middleware",
+        "Backend/src/models/** - Mongoose user, product, price, cart, and payment models",
+        "Backend/src/routes/** - Authentication, product, and cart API routes",
+        "Backend/src/services/** - ImageKit image uploads and Razorpay order creation",
+        "Backend/src/validator/** - Authentication, product, and cart request validation"
+      ],
+      "root": [
+        "Frontend/index.html - Vite HTML entry point",
+        "Frontend/package.json - Frontend dependencies and development/build scripts",
+        "Frontend/package-lock.json - Locked frontend dependency versions",
+        "Frontend/vite.config.js - Vite configuration",
+        "Frontend/README.md - Frontend documentation file",
+        "Backend/server.js - Connects to MongoDB and starts the backend server",
+        "Backend/package.json - Backend dependencies and development scripts",
+        "Backend/package-lock.json - Locked backend dependency versions"
+      ]
     },
     "screenshots": [
       "https://raw.githubusercontent.com/ratna756083/my-project-repo/c3f83b7a369296ef68e348428634ccb5dbd75313/public/images/snitch1.png",
@@ -188,9 +193,31 @@
     "liveDemo": "https://snitch-6.onrender.com",
     "readmeHighlights": {
       "installation": "Frontend: cd Frontend && npm install && npm run dev. Backend: cd Backend && npm install && npm run dev.",
-      "envSetup": "Backend configuration requires MONGO_URI, JWT_SECRET, GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET, IMAGEKIT_PRIVATE_KEY, RAZORPAY_KEY_ID, RAZORPAY_KEY_SECRET, REDIS_HOST, REDIS_PORT, and REDIS_PASSWORD.",
-      "usage": "Register or sign in as a buyer to browse products and shop, or sign in as a seller to create listings and manage product variants."
+      "envSetup": [
+        "MONGO_URI=your_mongodb_connection_string",
+        "JWT_SECRET=your_jwt_secret",
+        "GOOGLE_CLIENT_ID=your_google_oauth_client_id",
+        "GOOGLE_CLIENT_SECRET=your_google_oauth_client_secret",
+        "IMAGEKIT_PRIVATE_KEY=your_imagekit_private_key",
+        "RAZORPAY_KEY_ID=your_razorpay_key_id",
+        "RAZORPAY_KEY_SECRET=your_razorpay_key_secret",
+        "REDIS_HOST=your_redis_host",
+        "REDIS_PORT=your_redis_port",
+        "REDIS_PASSWORD=your_redis_password"
+      ],
+      "usage": "Register or sign in to browse and shop. Seller accounts can create product listings and manage variants from the seller dashboard."
     },
+    "tags": [
+      "ecommerce",
+      "marketplace",
+      "react",
+      "nodejs",
+      "express",
+      "mongodb",
+      "razorpay",
+      "google-oauth",
+      "imagekit"
+    ],
     "isLatest": true
   },
   {
