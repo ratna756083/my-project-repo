@@ -79,10 +79,10 @@
       }
     },
     "screenshots": [
-      "https://raw.githubusercontent.com/github.com/ratna756083/my-project-repo/blob/main/public/images/perplexity1.png",
-      "https://raw.githubusercontent.com/github.com/ratna756083/my-project-repo/blob/main/public/images/perplexcity2.png",
-      "https://raw.githubusercontent.com/github.com/ratna756083/my-project-repo/blob/main/public/images/perplexcity3.png",
-      "https://raw.githubusercontent.com/github.com/ratna756083/my-project-repo/blob/main/public/images/perplexcity4.png"
+      "https://github.com/ratna756083/my-project-repo/blob/main/public/images/perplexity1.png?raw=true",
+      "https://github.com/ratna756083/my-project-repo/blob/main/public/images/perplexcity2.png?raw=true",
+      "https://github.com/ratna756083/my-project-repo/blob/main/public/images/perplexcity3.png?raw=true",
+      "https://github.com/ratna756083/my-project-repo/blob/main/public/images/perplexcity4.png?raw=true"
     ],
     "githubLink": "https://github.com/ratna756083/Perplexity",
     "liveDemo": "https://perplexity-frontend-9e0x.onrender.com",
@@ -177,12 +177,12 @@
     "screenshots": [
       "https://raw.githubusercontent.com/ratna756083/my-project-repo/c3f83b7a369296ef68e348428634ccb5dbd75313/public/images/snitch1.png",
       "https://github.com/ratna756083/my-project-repo/blob/main/public/images/snithch2.png?raw=true",
-      "https://raw.githubusercontent.com/github.com/ratna756083/my-project-repo/blob/main/public/images/snitch3.png",
-      "https://raw.githubusercontent.com/github.com/ratna756083/my-project-repo/blob/main/public/images/snitch4.png",
-      "https://raw.githubusercontent.com/github.com/ratna756083/my-project-repo/blob/main/public/images/snitch5.png",
-      "https://raw.githubusercontent.com/github.com/ratna756083/my-project-repo/blob/main/public/images/snitch6.png",
-      "https://raw.githubusercontent.com/github.com/ratna756083/my-project-repo/blob/main/public/images/snitch7.png",
-      "https://raw.githubusercontent.com/github.com/ratna756083/my-project-repo/blob/main/public/images/snitch8.png"
+      "https://github.com/ratna756083/my-project-repo/blob/main/public/images/snitch3.png?raw=true",
+      "https://github.com/ratna756083/my-project-repo/blob/main/public/images/snitch4.png?raw=true",
+      "https://github.com/ratna756083/my-project-repo/blob/main/public/images/snitch5.png?raw=true",
+      "https://github.com/ratna756083/my-project-repo/blob/main/public/images/snitch6.png?raw=true",
+      "https://github.com/ratna756083/my-project-repo/blob/main/public/images/snitch7.png?raw=true",
+      "https://github.com/ratna756083/my-project-repo/blob/main/public/images/snitch8.png?raw=true"
     ],
     "githubLink": "https://github.com/ratna756083/Snitch",
     "liveDemo": "https://snitch-6.onrender.com",
