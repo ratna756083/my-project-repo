@@ -1,47 +1,189 @@
 [
     {
-    "title": "AI-CHAT-APP",
-    "slug": "ai-chatbot",
-    "description": "Chat App with AI is a real-time collaborative platform where multiple users can join a shared chat room to communicate seamlessly. It integrates an intelligent AI assistant (@AI) that users can tag for instant help or code-related answers. The app also includes an in-browser Node.js server feature, allowing users to run backend code directly from the browser without external deployment.",
-    "whyBuilt": "To create a unified platform that enables real-time collaboration, peer communication, and AI-powered problem-solving, all within a browser-based development environment. It bridges the gap between human teamwork and AI assistance, ideal for coding sessions, discussions, or study groups.",
-    "techStack": [
-      "React",
-      "Vite",
-      "Tailwind CSS",
-      "React Router",
-      "Node.js",
-      "Express.js",
-      "MongoDB",
-      "Gemini API"
-
+  "title": "Perplexity AI Chat",
+  "slug": "perplexity-ai-chat",
+  "description": "A full-stack AI chat application that combines conversational AI with web search. Users can create and revisit conversations, get AI-generated chat titles, and view responses in a clean, Markdown-enabled interface.",
+  "whyBuilt": "To make AI-assisted research and everyday problem-solving accessible through a simple chat experience, with web search and persistent conversation history built in.",
+  "techStack": [
+    "React",
+    "Vite",
+    "Tailwind CSS",
+    "React Router",
+    "Redux Toolkit",
+    "Node.js",
+    "Express.js",
+    "MongoDB",
+    "Mongoose",
+    "LangChain",
+    "Google Gemini API",
+    "Mistral AI",
+    "Tavily Search API",
+    "Socket.IO"
+  ],
+  "features": [
+    "AI-powered conversations using Google Gemini",
+    "Internet search integration for up-to-date information",
+    "Separate conversations with generated chat titles",
+    "Persistent chat history stored in MongoDB",
+    "Create, open, and delete conversations",
+    "Markdown-rendered AI responses",
+    "Email and password registration and login",
+    "Google OAuth sign-in",
+    "Protected chat dashboard and user session handling",
+    "Responsive chat interface with mobile-friendly navigation"
+  ],
+  "folderStructure": {
+    "root": [
+      "README.md - Main project overview and documentation"
     ],
-    "features": [
-      "Real-time group chat using WebSockets",
-      "Multi-user collaboration (rooms and channels)",
-      "Tag @AI to get instant answers, explanations, or code help",
-      "Run Node.js server in the browser using WebContainer (by StackBlitz tech)",
-      "Persistent chat history and user sessions",
-      "Syntax-highlighted code blocks and markdown messages",
-      "Authentication and user profiles",
-      "Typing indicators and online/offline status",
-      "Mobile-friendly responsive design"
-    ],
-    "folderStructure":"Not provided",
-    "screenshots": [
-     "https://raw.githubusercontent.com/ratna756083/my-project-repo/refs/heads/main/public/images/chatapp1.png",
-     "https://raw.githubusercontent.com/ratna756083/my-project-repo/refs/heads/main/public/images/chatapp2.png",
-     "https://raw.githubusercontent.com/ratna756083/my-project-repo/refs/heads/main/public/images/chatapp3.png",
-     "https://raw.githubusercontent.com/ratna756083/my-project-repo/refs/heads/main/public/images/chatapp4.png"
-    ],
-    "githubLink": "https://github.com/ratna756083/AI-CHAT-APP",
-    "liveDemo": "http://ai-chat-app-sage.vercel.app",
-    "readmeHighlights": {
-      "installation": "frontend-npm install && npm run dev, backend-npm install && npm start",
-      "envSetup": "You need to set up environment variables for API keys and database connections",
-      "usage": "Resister,Login then uses, "
+    "frontend": {
+      "root": [
+        "Frontend/README.md - Frontend-specific documentation"
+      ],
+      "src": [
+        "Frontend/src/main.jsx - Frontend entry point; initializes and renders the React application",
+        "Frontend/src/app/App.jsx - Root application component",
+        "Frontend/src/app/app.routes.jsx - Route definitions for the dashboard, login, and registration pages",
+        "Frontend/src/app/app.store.js - Redux store configuration",
+        "Frontend/src/app/index.css - Global styles and Tailwind CSS imports",
+        "Frontend/src/features/auth/auth.slice.js - Redux authentication state",
+        "Frontend/src/features/auth/componets/Protected.jsx - Protects routes that require an authenticated user",
+        "Frontend/src/features/auth/hooks/useAuth.js - Authentication-related React hook and actions",
+        "Frontend/src/features/auth/pages/Login.jsx - User login page",
+        "Frontend/src/features/auth/pages/Register.jsx - User registration page",
+        "Frontend/src/features/auth/services/auth.api.js - Frontend API calls for authentication",
+        "Frontend/src/features/chat/chat.slice.js - Redux state for chats and messages",
+        "Frontend/src/features/chat/hooks/useChat.js - Chat actions and chat-related application logic",
+        "Frontend/src/features/chat/pages/Dashboard.jsx - Main chat interface, conversation list, and message composer",
+        "Frontend/src/features/chat/service/chat.api.js - Frontend API calls for chat and message operations",
+        "Frontend/src/features/chat/service/chat.socket.js - Socket.IO client connection setup"
+      ]
     },
-    "isLatest": true
-  },{
+    "backend": {
+      "root": [
+        "Backend/server.js - Starts the HTTP server, connects to MongoDB, and initializes Socket.IO",
+        "Backend/.env.example - Example template for backend environment variables"
+      ],
+      "src": [
+        "Backend/src/app.js - Configures Express, middleware, Google OAuth, CORS, and API routes",
+        "Backend/src/config/database.js - Connects the application to MongoDB",
+        "Backend/src/controllers/auth.controller.js - Handles registration, login, Google OAuth callback, current-user lookup, and logout",
+        "Backend/src/controllers/chat.controller.js - Handles sending messages, listing chats, loading messages, and deleting chats",
+        "Backend/src/middleware/auth.middleware.js - Verifies user authentication for protected routes",
+        "Backend/src/models/user.model.js - Mongoose user model",
+        "Backend/src/models/chat.model.js - Mongoose conversation model",
+        "Backend/src/models/message.model.js - Mongoose chat message model",
+        "Backend/src/routes/auth.routes.js - Authentication and Google OAuth routes",
+        "Backend/src/routes/chat.routes.js - Protected chat and message API routes",
+        "Backend/src/services/ai.services.js - Generates AI responses and chat titles using LangChain model integrations",
+        "Backend/src/services/internet.services.js - Provides internet search through the Tavily API",
+        "Backend/src/sockets/server.socket.js - Initializes the Socket.IO server",
+        "Backend/src/validators/auth.validator.js - Validates authentication requests"
+      ]
+    }
+  },
+  "screenshots": [],
+  "githubLink": "https://github.com/ratna756083/Perplexity",
+  "liveDemo": "https://perplexity-frontend-9e0x.onrender.com",
+  "readmeHighlights": {
+    "installation": "Frontend: cd Frontend && npm install && npm run dev. Backend: cd Backend && npm install && npm run dev.",
+    "envSetup": "Configure MONGO_URI, JWT_SECRET, GOOGLE_API_KEY, MISTRAL_API_KEY, TAVILY_API_KEY, GOOGLE_CLIENT_ID, and GOOGLE_CLIENT_SECRET in the backend environment.",
+    "usage": "Register or sign in, start a conversation, and ask the AI a question. Your conversations are saved so you can return to them later."
+  },
+  "isLatest": true
+},
+{
+  "title": "Snitch — E-commerce Marketplace",
+  "slug": "snitch-e-commerce-marketplace",
+  "description": "A full-stack shopping platform where customers can browse products, choose variants, manage a cart, and pay online. Sellers can create and manage product listings through a protected dashboard.",
+  "whyBuilt": "To create a complete online shopping experience that brings product discovery, seller tools, cart management, and secure online payments together in one application.",
+  "techStack": [
+    "React",
+    "Vite",
+    "Tailwind CSS",
+    "React Router",
+    "Redux Toolkit",
+    "Axios",
+    "Node.js",
+    "Express.js",
+    "MongoDB",
+    "Mongoose",
+    "Redis",
+    "Passport.js",
+    "Google OAuth 2.0",
+    "ImageKit",
+    "Razorpay"
+  ],
+  "features": [
+    "Browse and search the product collection",
+    "Sort products by newest and price",
+    "View product details, images, and available variants",
+    "Register and sign in with email and password",
+    "Sign in with Google OAuth",
+    "Separate buyer and seller roles",
+    "Protected seller dashboard for managing listings",
+    "Create product listings with multiple images",
+    "Add product variants with attributes, images, prices, and stock",
+    "Add products to a cart and update item quantities",
+    "Check product stock when managing cart items",
+    "Pay through Razorpay checkout",
+    "Verify payments on the backend and save payment records",
+    "View an order-success page after checkout",
+    "Store user, product, cart, and payment data in MongoDB",
+    "Use cookie-based JWT sessions with Redis-backed token revocation",
+    "Responsive shopping and seller interfaces"
+  ],
+  "folderStructure": {
+    "root": [
+      "Frontend/ - React/Vite client application",
+      "Backend/ - Express API and server"
+    ],
+    "frontend": {
+      "root": [
+        "Frontend/index.html - Vite HTML entry point",
+        "Frontend/package.json - Frontend dependencies and scripts",
+        "Frontend/vite.config.js - Vite configuration",
+        "Frontend/public/ - Static assets"
+      ],
+      "src": [
+        "Frontend/src/main.jsx - Frontend entry point",
+        "Frontend/src/app/App.jsx - Root React component",
+        "Frontend/src/app/app.routes.jsx - Application routes",
+        "Frontend/src/app/app.store.js - Redux store configuration",
+        "Frontend/src/features/auth/ - Authentication state, API calls, hooks, pages, and protected-route component",
+        "Frontend/src/features/products/ - Product state, API calls, hooks, storefront, product detail, and seller pages",
+        "Frontend/src/features/cart/ - Cart state, API calls, hooks, cart page, and order-success page"
+      ]
+    },
+    "backend": {
+      "root": [
+        "Backend/server.js - Connects to MongoDB and starts the API server",
+        "Backend/package.json - Backend dependencies and development script"
+      ],
+      "src": [
+        "Backend/src/app.js - Express setup, CORS, middleware, Google OAuth, and API routes",
+        "Backend/src/config/ - Database, environment configuration, and Redis connection",
+        "Backend/src/controllers/ - Authentication, product, and cart request handlers",
+        "Backend/src/dao/ - Product and cart data-access helpers",
+        "Backend/src/middlewares/auth.middleware.js - User and seller authentication",
+        "Backend/src/models/ - User, product, price, cart, and payment schemas",
+        "Backend/src/routes/ - Authentication, product, and cart API routes",
+        "Backend/src/services/ - ImageKit uploads and Razorpay order creation",
+        "Backend/src/validator/ - Authentication, product, and cart request validation"
+      ]
+    }
+  },
+  "screenshots": [],
+  "githubLink": "https://github.com/ratna756083/Snitch",
+  "liveDemo": "https://snitch-6.onrender.com",
+  "readmeHighlights": {
+    "installation": "Frontend: cd Frontend && npm install && npm run dev. Backend: cd Backend && npm install && npm run dev.",
+    "envSetup": "Backend configuration requires MONGO_URI, JWT_SECRET, GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET, IMAGEKIT_PRIVATE_KEY, RAZORPAY_KEY_ID, RAZORPAY_KEY_SECRET, REDIS_HOST, REDIS_PORT, and REDIS_PASSWORD.",
+    "usage": "Register or sign in as a buyer to browse products and shop, or sign in as a seller to create listings and manage product variants."
+  },
+  "isLatest": true
+},
+{
     "title": "KHATABOOK",
     "slug": "khatabook",
     "description": "Khatabook is a simple yet powerful bookkeeping application built with Node.js and Express. It allows users to record, update, and track financial transactions and balances using the Node.js file system for storage instead of a database.",
